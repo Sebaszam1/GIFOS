@@ -1,0 +1,269 @@
+//---------------------------------------COLORES----------------------------------------------
+
+//Light mode
+html {
+    --colorPrincipal: #572ee5;
+    --colorSecundario: #50e3c2;
+    --colorBackground: #ffffff;
+    --clPrincTrans: rgba(87, 46, 229, 0.9);
+    --clSpanHamb: rgba(255, 255, 255, 0.3);
+    --colorSearchs: #9cafc3;
+    --trendBackColor: #f3f5f8;
+    --letrasNegras: #000000;
+    --inputColor: #6b7989;
+    --backgrounds: #572ee5;
+    //--searchBarColor:;
+}
+//colores del modo oscuro
+html[mode="dark"] {
+    --colorPrincipal: #ffffff;
+    --colorBackground: #37383c;
+    --backgrounds: #000000;
+    --clPrincTrans: #000000;
+    --colorSearchs: #ffffff;
+    --trendBackColor: #222326;
+    --letrasNegras: #ffffff;
+}
+
+
+//---------------------------------------MIXINES-------------------------------------
+@mixin mobileShown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 2.4% 0 2.4%;
+    img {
+        width: 41.6%;
+        height: 32vw;
+        margin: 25px 11px 0 11px;
+    }
+    .cardDiv {
+        display: none;
+    }
+}
+@mixin desktopShown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.1vw;
+    width: 78.264%;
+    height: auto;
+    justify-content: space-between;
+    img {
+        width: 100%;
+        height: 13.9vw;
+        margin: 0 0 0 0;
+    }
+    .cardDiv {
+        @include gifCard(18%, 13.9vw);
+    }
+}
+@mixin button {
+    margin: 20.8% 0 20.8% 0;
+    align-self: center;
+    width: 34.4%;
+    height: 50px;
+    border: 1px solid var(--colorPrincipal);
+    border-radius: 25px;
+    background: none;
+    cursor: pointer;
+}
+
+@mixin noResults {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+        margin: 11.4% 0 26% 0;
+    }
+    img {
+        width: 130px;
+        margin-bottom: 5%;
+    }
+    p {
+        font-size: 22px;
+        color: var(--colorSecundario);
+        text-align: center;
+        line-height: 25px;
+        margin-bottom: 26%;
+        font-weight: 700;
+    }
+}
+@mixin noResultsDesktop {
+    h2 {
+        margin: 20.5% 0 36% 0;
+        font-size: 30px;
+    }
+    img {
+        width: 150px;
+        margin-bottom: 9.6%;
+    }
+
+    p {
+        margin-bottom: 47.7%;
+    }
+}
+@mixin arrowBtn {
+    display: flex;
+    border: 1px solid var(--colorPrincipal);
+    width: 40px;
+    height: 40px;
+    padding: 12px 15px 12px 15px;
+    cursor: pointer;
+}
+@mixin gifCard($width, $height) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background: rgba(87, 46, 229, 0.7);
+    width: $width;
+    height: $height;
+    position: absolute;
+    margin-left: 0;
+    z-index: 0;
+    .divIcons {
+        display: flex;
+        align-self: flex-end;
+        img {
+            opacity: 0.7;
+            background: #ffffff;
+            border-radius: 6px;
+            margin: 10px 10px 0 0;
+            width: 32px;
+            height: 32px;
+            padding: 7px;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+    .divText {
+        display: flex;
+        flex-direction: column;
+        height: 35%;
+        margin-left: 5%;
+        :first-child {
+            display: flex;
+            align-items: center;
+            font-family: "Roboto";
+            font-size: 1.0416vw;
+            line-height: 1.736vw;
+            color: #ffffff;
+            text-align: left;
+            height: 21.5%;
+        }
+        :last-child {
+            font-family: "Roboto";
+            font-size: 1.111vw;
+            color: #ffffff;
+            font-weight: 700;
+            line-height: 1.736vw;
+            text-align: left;
+        }
+    }
+}
+@mixin maxed($sliderBtns, $padding, $clsBtn, $gifHeight) {
+    position: fixed;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr auto 1fr;
+    row-gap: 1.52vw;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    background-color: var(--colorBackground);
+    padding: $padding;
+    img {
+        display: none;
+    }
+    .cardDiv {
+        display: none;
+    }
+    .close {
+        display: block;
+        grid-column: 4;
+        justify-self: $clsBtn;
+        align-self: center;
+        margin-left: 6.69vw;
+        cursor: pointer;
+    }
+    #lftBtn {
+        display: $sliderBtns;
+        border: 1px solid var(--colorPrincipal);
+        width: 40px;
+        height: 40px;
+        grid-column: 1/2;
+        justify-self: end;
+        align-self: center;
+        margin-right: 1.736vw;
+        padding: 12px 15px 12px 15px;
+        cursor: pointer;
+        &:hover {
+            border: none;
+            background-color: var(--colorPrincipal);
+            padding: 0;
+        }
+    }
+    .gifMaxed {
+        display: block;
+        width: 100%;
+        height: $gifHeight;
+        align-self: center;
+    }
+    #rgtBtn {
+        display: $sliderBtns;
+        border: 1px solid var(--colorPrincipal);
+        width: 40px;
+        height: 40px;
+        grid-column: 4/5;
+        justify-self: start;
+        align-self: center;
+        margin-left: 1.736vw;
+        padding: 12px 15px 12px 15px;
+        cursor: pointer;
+        &:hover {
+            border: none;
+            background-color: var(--colorPrincipal);
+            padding: 0;
+        }
+    }
+    .divText {
+        align-self: start;
+        justify-self: self-start;
+        p {
+            font-family: "Roboto";
+            font-weight: bold;
+            color: var(--letrasNegras);
+            text-align: left;
+        }
+        &:first-child {
+            font-weight: 400;
+            font-size: 14px;
+        }
+        &:last-child {
+            font-weight: bold;
+            font-size: 16px;
+        }
+    }
+    .divIcons {
+        align-self: flex-start;
+        justify-self: end;
+        display: flex;
+        img {
+            display: block;
+            border: 1px solid #ced7e1;
+            opacity: 0.7;
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 6%;
+            margin-left: 1.458vw;
+            cursor: pointer;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

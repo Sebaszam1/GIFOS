@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIFOS</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+    <header class="headerSticky">
+        <div class="logo" id="head">
+            <img alt="logo mobile" src="assets/logo-mobile.svg" id="logoMob">
+            <img alt="logo desktop" src="assets/logo-desktop.svg" id="logoDesk">
+            
+        </div>
+        <nav>
+            <div class="menu">
+                <input type="checkbox" id="checkbox" />
+                <span class="hamb"></span>
+                <span class="hamb"></span>
+                <span class="hamb"></span>
+                <ul id="menuUl">
+                    <li id="toggleModes" class="li_normal">Modo Nocturno</li>
+                    <li><span></span></li>
+                    <li id="fav" class="li_normal">Favoritos</li>
+                    <li><span></span></li>
+                    <li id="mis_gifos" class="li_normal">Mis GIFOS</li>
+                    <li id="lastSpan"><span></span></li>
+                    <li class="li_normal"><button id="crateGif">
+                            <img alt="button_crear_gifs" src="assets/button-crear-gifo.svg" id="btn-crear">
+                        </button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="headShown" id="head_section">
+            <h1>Inspírate, busca, guarda, y crea <span id="br">los mejores <span id="gifos"> GIFOS </span></span></h1>
+            <img src="assets/ilustra_header.svg" alt="ilustración header" id="ilustra_header">
+            <div class="search_bar" id="search_bar">
+                <div class="busqueDiv">
+                    <img src="assets/close.svg" alt="close" id="close" class="close">
+                    <div id="input_ctn" class="input_ctn">
+                        <input type="search" placeholder="Busca GIFOS y más" id="searchInput">
+                    </div>
+                    <button id="lupa" class="lupaImgShow">
+                        <img src="assets/icon-search.svg" alt="search_img" class="search" id="search">
+                    </button>
+                </div>
+                <span class="lineaHid" id="linea"></span>
+                <div id="suggest_container" class="suggest_container"></div>
+            </div>
+            <div class="trendsShow" id="trends">
+                <h3>Trending:</h3>
+            </div>
+        </section>
+        <section class="searchHidden" id="search_section">
+            <span class="line"></span>
+            <div class="resultsHidden" id="searchContainer"> </div>
+            <div class="noResultsHidden" id="noResultsSearch">
+                <img src="assets/icon-busqueda-sin-resultado.svg" alt="busqueda_sin_resultados">
+                <p>Intenta con otra búsqueda.</p>
+            </div>
+        </section>
+        <section class="favHidden" id="fav_section">
+            <img src="assets/icon-favoritos.svg" alt="favoritos.svg">
+            <h2>Favoritos</h2>
+            <div class="resultsHidden" id="favContainer">
+            </div>
+            <div class="noResultsHidden" id="noFavsContainer">
+                <img src="assets/icon-fav-sin-contenido.svg" alt="fav_sin_contenido">
+                <p>"¡Guarda tu primer GIFO en Favoritos <br>
+                    para que se muestre aquí!"</p>
+            </div>
+        </section>
+        <section class="mis_gifosHidden" id="mis_gifos_section">
+            <img src="assets/icon-mis-gifos.svg" alt="mis_gifos">
+            <h2>Mis Gifos</h2>
+            <div class="resultsHidden" id="misGifosCtn">
+            </div>
+            <div class="noResultsHidden" id="noGifosCtn">
+                <img src="assets/icon-mis-gifos-sin-contenido.svg" alt="Mis_gifos_sin_contenido">
+                <p>¡Anímate a crear tu primer GIFO!</p>
+            </div>
+        </section>
+        <section id="crateGif_section" class="crateGifHidden">
+            <div class="camera">
+                <img src="assets/camara.svg" alt="camera" id="cameraSvg">
+                <div id="light"></div>
+            </div>
+            <div class="recuadro" id="recuadro">
+                <div class="corner" id="corn1"></div>
+                <div class="corner" id="corn2"></div>
+                <div class="textCrearSw" id="text1">
+                    <h2>Aquí podrás <br> crear tus propios <span> GIFOS</span></h2>
+                    <p>¡Crea tu GIFO en sólo 3 pasos! <br> (sólo necesitas una cámara para grabar un video)</p>
+                </div>
+                <div class="textCrearHid" id="text2">
+                    <h2>¿Nos das acceso a tu cámara?</h2>
+                    <p>El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.</p>
+                </div>
+                <div id="video" class="videoHid">
+                    <div class="textCrearHid" id="text3">
+                        <img src="assets/loader.svg" alt="loader">
+                        <p> Estamos subiendo tu GIFO</p>
+                    </div>
+                    <div class="textCrearHid" id="text4">
+                        <div class="btns">
+                            <img src="assets/icon-download.svg" alt="download" id="myGifDwl">
+                            <img src="assets/icon-link.svg" alt="link" id="myLink"></div>
+                        <div class="txt">
+                            <img src="assets/check.svg" alt="check">
+                            <p>GIFO subido con éxito</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="corner" id="corn3"></div>
+                <div class="corner" id="corn4"></div>
+            </div>
+            <div class="steps">
+                <div class="nums">
+                    <div class="dir">
+                        <p class="numInactive" id="p1">1</p>
+                        <p class="numInactive" id="p2">2</p>
+                        <p class="numInactive" id="p3">3</p>
+                    </div>
+                    <div class="time" id="time">
+                    </div>
+                </div>
+                <span></span>
+                <button id="grabarBtn">COMENZAR</button>
+            </div>
+            <div class="pelicula">
+                <img src="assets/pelicula.svg" alt="pelicula.svg" id="cinta">
+            </div>
+        </section>
+        <section class="trendingShown" id="trendings">
+            <h2>Trending GIFOS</h2>
+            <p>Mira los últimos <span> GIFOS de nuestra comunidad.</span></p>
+            <div class="gif_container" id="trending">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h5>Compartir en:</h5>
+        <div class="icons">
+            <a href="https://www.facebook.com/" target="_blank"><img src="assets/icon_facebook.svg" alt="facebook"
+                    id="facebook" /></a>
+            <a href="https://twitter.com/" target="_blank"><img src="assets/icon-twitter.svg" alt="twitter"
+                    id="twitter" /></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="assets/icon_instagram.svg" alt="instagram"
+                    id="instagram" /></a>
+        </div>
+        <p>© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+    <script src="scripts/Trends&Search.js"></script>
+    <script src="scripts/transiciones.js"></script>
+    <script src="scripts/cards.js"></script>
+    <script src="scripts/fav.js"></script>
+    <script src="scripts/misGifos.js"></script>
+    <!-- recommended -->
+    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+
+    <!-- use 5.5.6 or any other version on cdnjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.6/RecordRTC.js"></script>
+
+</body>
+
+</html>

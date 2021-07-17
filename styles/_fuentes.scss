@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@500&display=swap");
+@import "_variables.scss";
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    color: var(--colorPrincipal);
+    text-align: center;
+    line-height: 33px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: var(--colorPrincipal);
+    text-align: center;
+    line-height: 30px;
+    font-weight: 700;
+}
+
+h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: var(--colorPrincipal);
+    text-align: center;
+    line-height: 25px;
+    font-weight: 700;
+}
+h5 {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--letrasNegras);
+    letter-spacing: 0;
+}
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: var(--colorPrincipal);
+    text-align: center;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 60px;
+    text-decoration: none;
+}
+.li_normal {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #ffffff;
+    line-height: 60px;
+    text-decoration: none;
+    button {
+        background-color: var(--colorBackground);
+    }
+}
+.li_active {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--inputColor);
+    line-height: 60px;
+    text-decoration: none;
+    button {
+        background: none;
+    }
+}
+
+input::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    text-align: left;
+}
+
+.search_title {
+    font-family: "Montserrat";
+    font-size: 25px;
+    color: var(--colorPrincipal);
+    text-align: center;
+    line-height: 40px;
+}
+
+button {
+    font-family: "Montserrat";
+    font-size: 13px;
+    color: var(--colorPrincipal);
+    letter-spacing: 0;
+    text-align: center;
+    font-weight: 700;
+    outline: none;
+}

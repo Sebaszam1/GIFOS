@@ -1,0 +1,284 @@
+@import "variables.scss";
+@media (min-width: 850px) {
+    header {
+        height: 90px;
+        padding: 10px 10.833vw;
+        
+        .logo {
+            img {
+                &:first-child {
+                    display: none;
+                }
+                &:nth-last-child(1) {
+                    display: block;
+                }
+            }
+        }
+        nav {
+            width: auto;
+            .menu {
+                input {
+                    display: none;
+                }
+                .hamb {
+                    display: none;
+                }
+                ul {
+                    display: flex;
+                    width: 100%;
+                    position: relative;
+                    top: 0;
+                    background: none;
+                    height: auto;
+                    transition: none;
+                    justify-content: space-between;
+                    li {
+                        &:hover {
+                            text-decoration: underline;
+                            text-decoration-color: var(--colorSecundario);
+                        }
+                        &:last-child {
+                            button {
+                                width: 56px;
+                                height: 56px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .li_normal {
+                        color: var(--colorPrincipal);
+                        button {
+                            border: 1px solid var(--colorPrincipal);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    main {
+        .headShown {
+            h1 {
+                font-size: 35px;
+                line-height: 50px;
+                font-weight: 700;
+                margin: 76px 0 24px 0;
+                #br {
+                    display: block;
+                }
+            }
+            #ilustra_header {
+                width: 27.71%;
+            }
+            .search_bar {
+                width: 38.4%;
+                margin-bottom: 3.82%;
+            }
+            .search_bar_clicked {
+                width: 38.4%;
+                margin-bottom: 3.82%;
+            }
+            .trendsShow {
+                margin: 1.25% 0 6.6% 0;
+                h3 {
+                    font-size: 18px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+        .searchShown {
+            .line {
+                width: 25%;
+                margin-top: 0;
+            }
+            .resultsShown {
+                align-items: center;
+                h2 {
+                    font-size: 35px;
+                    color: var(--colorPrincipal);
+                    font-weight: 700;
+                    margin: 5.7% 0 4.1% 0;
+                }
+                .searchGifs {
+                    @include desktopShown;
+                }
+                .maxed {
+                    @include maxed(block, 0, start, 27vw);
+                    .gifMaxed {
+                        grid-column: 2/4;
+                    }
+                    .divText {
+                        grid-column: 2/3;
+                    }
+                    .divIcons {
+                        grid-column: 3/4;
+                    }
+                }
+                button {
+                    margin: 3.34% 0 5.5% 0;
+                    font-weight: 700;
+                    width: 8.96%;
+                    &:hover {
+                        color: var(--colorBackground);
+                        background-color: var(--colorPrincipal);
+                    }
+                }
+            }
+            .noResultsShown {
+                @include noResultsDesktop;
+            }
+        }
+        .favShown {
+            .resultsShown {
+                align-items: center;
+                .favDivCtn {
+                    @include desktopShown;
+                }
+                button {
+                    margin: 3.34% 0 5.5% 0;
+                    font-weight: 700;
+                    width: 8.96%;
+                    &:hover {
+                        color: var(--colorBackground);
+                        background-color: var(--colorPrincipal);
+                    }
+                }
+
+                .maxed {
+                    @include maxed(block, 0, start, 27vw);
+                    .gifMaxed {
+                        grid-column: 2/4;
+                    }
+                    .divText {
+                        grid-column: 2/3;
+                    }
+                    .divIcons {
+                        grid-column: 3/4;
+                    }
+                }
+            }
+            .noResultsShown {
+                @include noResultsDesktop;
+            }
+            .maxed {
+                @include maxed(block, 0, start, 27vw);
+                .gifMaxed {
+                    grid-column: 2/4;
+                }
+                .divText {
+                    grid-column: 2/3;
+                }
+                .divIcons {
+                    grid-column: 3/4;
+                }
+            }
+        }
+        .mis_gifosShown {
+            .resultsShown {
+                align-items: center;
+                .misGifosCtn {
+                    @include desktopShown;
+                }
+                button {
+                    margin: 3.34% 0 5.5% 0;
+                    font-weight: 700;
+                    width: 8.96%;
+                    &:hover {
+                        color: var(--colorBackground);
+                        background-color: var(--colorPrincipal);
+                    }
+                }
+                .maxed {
+                    @include maxed(block, 0, start, 27vw);
+                    .gifMaxed {
+                        grid-column: 2/4;
+                    }
+                    .divText {
+                        grid-column: 2/3;
+                    }
+                    .divIcons {
+                        grid-column: 3/4;
+                    }
+                }
+            }
+        }
+        .trendingShown {
+            h2 {
+                padding-top: 4.66%;
+                font-size: 25px;
+            }
+            p {
+                margin: 0.85% 0 3.7% 0;
+                font-size: 18px;
+                span {
+                    display: inline-block;
+                }
+            }
+            .gif_container {
+                padding-bottom: 12.64%;
+                .trendBtnLt {
+                    @include arrowBtn;
+                    &:hover {
+                        border: none;
+                        background-color: var(--colorPrincipal);
+                        padding: 0;
+                    }
+                }
+                .trendCtn {
+                    width: 80%;
+                    overflow: hidden;
+                    img {
+                        margin: 0 0 0 2.3%;
+                        width: 30.989%;
+                        height: 19vw;
+                    }
+                    .cardDiv {
+                        @include gifCard(24.791%, 19vw);
+                    }
+                }
+                .maxed {
+                    @include maxed(block, 0, start, 27vw);
+                    .gifMaxed {
+                        grid-column: 2/4;
+                    }
+                    .divText {
+                        grid-column: 2/3;
+                    }
+                    .divIcons {
+                        grid-column: 3/4;
+                    }
+                }
+                .trendBtnRt {
+                    @include arrowBtn;
+                    margin-left: 2.3%;
+                    &:hover {
+                        border: none;
+                        background-color: var(--colorPrincipal);
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+    footer {
+        flex-direction: row;
+        justify-content: flex-start;
+
+        h5 {
+            margin: 50px 1.18% 50px 11%;
+            flex-shrink: 0;
+            font-size: 13px;
+        }
+        .icons {
+            flex-shrink: 0;
+            width: 6%;
+        }
+        p {
+            margin: 0 11% 0 51%;
+            font-size: 13px;
+            flex-shrink: 0;
+        }
+    }
+}
